@@ -1,6 +1,6 @@
 # Homework 2: Building a Blog in Rails
 
-Regular credit is due **11:59PM, Friday, March 6th**.
+Regular credit is due **11:59PM, Monday, October 19th**.
 Extra credit is due on **the last day of class**.
 
 ## 1. Introduction
