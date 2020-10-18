@@ -67,7 +67,7 @@ Keep in mind the naming convention. For a model named `Model`, the controller fi
 
 We'll first use the rails generator commands to create the `Post` model.
 Our Post will have the following properties:
- 
+
  * `title`, of type `string`, will be the title of each blog post. 
  * `content`, of type `text`, will contain the content (the text) of each post.
 
@@ -160,7 +160,7 @@ We haven't talked about `<form>`s yet so just do the following:
 When you are done, boot up `rails s -b 0.0.0.0`. You should see something like this on http://localhost:3000/posts/new:
 ![Screen Shot 2019-10-11 at 10.51.23 PM](https://i.imgur.com/RqFYFFB.png)
 
-    
+
 ##### `create`
 This route is different from all the routes you have seen thus far, as it is associated with the `POST` HTTP method. This means that this is not triggered by any "page visits" you do through the browser. So when is it triggered? -- when you hit the 'submit' button in the form you see just now!
 
@@ -203,6 +203,7 @@ We haven't talked about `<form>`s yet so just do the following:
     * The second line is `<%= render 'form', post: @post %>`. 
     This renders the `_form.html.erb` as part of the page, and passes the empty new `@post` to the form.
     
+
 When you are done, boot up `rails s -b 0.0.0.0`. You should see something like this on http://localhost:3000/posts/2/edit:
 ![Screen Shot 2019-10-11 at 11.00.16 PM](https://i.imgur.com/q4Eduy1.png)
 
@@ -224,7 +225,7 @@ This method, like `save` returns a boolean type, so for the view:
 The `destroy` method is easier to implement: you first find the post object just like you did for `show`, `edit`, and `update`, then simply call:
 ```ruby
 @post.destroy
-``` 
+```
 
 Then no matter if the deletion is successful, always redirect the page to `/posts` path.
 
@@ -267,7 +268,7 @@ Therefore, to ensure usability:
 > At this point, your blog should look something like this:
 > https://cis196-hw2-linked.herokuapp.com/
 
-        
+
 ## Task 3: Making the Blog Look Good
 
 Great, our application should be working now! You should be able to read your posts, create new posts, edit them, and delete! With our functionality done, let's go on to the fun part -- making our application look good! 
