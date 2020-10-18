@@ -1,0 +1,4 @@
+<h1><%= "Edit Post ##{@post.id}" %></h1>
+<%= render 'form', post: @post %>
+<%= button_to "Delete", post_path(@post), method: :delete, data: { confirm: 'Are you sure to delete?'}, class: "btn btn-outline-dark btn-sm" %>
+<a class="btn btn-outline-dark btn-sm" href=<%= "/posts" %> role="button">Back</a>

@@ -1,0 +1,35 @@
+<script src="https://kit.fontawesome.com/1d9373cc66.js" crossorigin="anonymous"></script>
+
+<div class="row">
+<div class="col-9" style="background-color:light; border:0px solid">
+  <div class="container-fluid">
+    <h1 ><strong>My Blog</strong></h1>
+  </div>
+</div>
+<div class="col-3" style="background-color:light; border:0px solid">
+  <div class="container-fluid">
+    <a class="btn btn-dark btn-sm" href="/posts/new" role="button"><i class="far fa-plus-square"></i>Create New Post</a>
+  </div>
+</div>
+</div>
+<% @posts.each do |post| %>
+<div class="row" style="padding-top: 30px;">
+  <div class="col-9" style="background-color:light; border:0px solid">
+    <div class="container-fluid">
+      <h2><a href=<%= "/posts/#{post.id}" %> style="color:black"><%= "#{post.title}" %></a></h2>
+    </div>
+  </div>
+  <div class="col-3" style="background-color:light; border:0px solid">
+    <div class="container-fluid">
+      <a class="btn btn-dark btn-sm" href=<%= "/posts/#{post.id}/edit" %> role="button"><i class="far fa-edit"></i>Edit</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12" style="background-color:light; border-bottom:1px solid">
+    <div class="container-fluid">
+      <p><%= post.content %></p>
+    </div>
+  </div>
+</div>
+<% end %>

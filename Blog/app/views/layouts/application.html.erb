@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid", id="title">
+          <a class="navbar-brand mb-0 h1" href="/">Siming He</a>
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="nav-link">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">
+                <a class="nav-link" href="/posts">Blog</a>
+              </div>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+    <div class="container-fluid", id="content">
+      <section id="body">
+        <%= yield %>
+      <section id="body">
+    </div>
+  </body>
+</html>
