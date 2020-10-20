@@ -316,3 +316,5 @@ sudo snap install --classic heroku
 2. After the installation is done, run `heroku run rails db:migrate` to initialize your database at heroku.
 
 Then you are all set!
+
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
